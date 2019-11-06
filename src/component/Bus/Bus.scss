@@ -1,0 +1,21 @@
+.card-container {
+    width: 15rem;
+    display: inline-block;
+    background-color: rgb(225, 231, 236);
+    border-radius: 1rem;
+    border: 2px black solid;
+    box-shadow: 10px 10px 5px #888888;
+    margin: 1rem auto;
+    transition: 1s;
+    &.active{
+        background-color: rgb(255, 65, 65)
+    }
+    h1 {
+        padding-left: 1rem;
+        font-size: 0.2rem;
+        font-weight: bolder;
+    }
+    &:hover{
+        background-color: rgb(88, 199, 88);
+    }
+}
