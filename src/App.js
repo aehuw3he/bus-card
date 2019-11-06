@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import BusList from "./component/BusList/BusList";
 
+let isSearching = false;
+let reserveBusData = [];
+let filterText = "";
+let filterBusObj = {};
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -26,10 +30,13 @@ export default class App extends Component {
       .then(
         function(myJson) {
           // console.log(myJson);
+          filterBusObj = myJson.filter(obj =>
+            obj.StopName.Zh_tw.includes(filterText)
+          );
           this.setState({
-            busData: myJson
+            busData: filterBusObj
           });
-          console.log(myJson);
+          // console.log(myJson);
         }.bind(this)
       );
   }
@@ -50,9 +57,34 @@ export default class App extends Component {
   componentDidUpdate() {
     // console.log(this.state.busData);
   }
+  handleSearchText = e => {
+    filterText = e.target.value;
+    if (!isSearching) {
+      isSearching = true;
+      reserveBusData = [...this.state.busData];
+    }
+    if (isSearching && filterText === "") {
+      isSearching = false;
+      this.setState({
+        busData: reserveBusData
+      });
+    } else {
+      filterBusObj = reserveBusData.filter(obj =>
+        obj.StopName.Zh_tw.includes(filterText)
+      );
+      this.setState({
+        busData: filterBusObj
+      });
+    }
+  };
+
   render() {
     return (
-      <BusList busData={this.state.busData} seconds={this.state.seconds} />
+      <BusList
+        busData={this.state.busData}
+        seconds={this.state.seconds}
+        handleSearchText={this.handleSearchText}
+      />
     );
   }
 }

@@ -17,45 +17,47 @@
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
-    .title-box {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        .font-titile {
-            text-align: center;
-            font-size: 2.5rem;
-            color: blue;
-            margin-bottom: 0;
-        }
-        .annotation {
-            padding: 0 2rem;
-            border: 1px blue double;
-            display: flex;
-            align-items: center;
-            .notice {
-                align-self: center;
-                background-color: red;
-                width: 2rem;
-                height: 2rem;
-                border-radius: 50%;
-            }
-            .font-notice {
-                padding-left: 1rem;
-                font-size: 1.5rem;
-                font-style: oblique;
-            }
-        }
+    .font-titile {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 900;
+        color: blue;
+        margin-bottom: 0;
     }
-    .interact-box {
-        margin-top: 3rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        .stopname {
-            margin: 0 2rem;
-            padding: 0 1rem;
+}
+.interact-box {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    .stopname {
+        padding: 1rem 0;
+        border: 2px blue double;
+        padding: 0 3rem;
+    }
+    .time-update {
+        padding: 1rem 0;
+        border: 2px blue double;
+        display: flex;
+        justify-content: center;
+    }
+    .annotation {
+        padding: 1rem 0;
+        border: 2px blue double;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .notice {
+            align-self: center;
+            background-color: red;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
         }
-        .time-update {
-            display: flex;
-            justify-content: center;
+        .font-notice {
+            padding-left: 1rem;
+            font-size: 1.5rem;
+            font-style: oblique;
         }
     }
 }
