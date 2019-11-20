@@ -18,9 +18,16 @@ export default class App extends Component {
     };
   }
   countDown() {
-    this.setState({
-      seconds: this.state.seconds - 1
-    });
+    if (this.state.seconds === 0) {
+      this.getBusDetail();
+      this.setState({
+        seconds: 5
+      });
+    } else {
+      this.setState({
+        seconds: this.state.seconds - 1
+      });
+    }
   }
   async getBusDetail() {
     fetch(this.state.url)
@@ -34,7 +41,8 @@ export default class App extends Component {
             obj.StopName.Zh_tw.includes(filterText)
           );
           this.setState({
-            busData: filterBusObj
+            busData: filterBusObj,
+            seconds: 5
           });
           // console.log(myJson);
         }.bind(this)
@@ -43,12 +51,6 @@ export default class App extends Component {
   // component被mount在畫面上後執行
   componentDidMount() {
     setInterval(() => {
-      if (this.state.seconds === 0) {
-        this.setState({
-          seconds: 6
-        });
-        this.getBusDetail();
-      }
       this.countDown();
     }, 1000);
     this.getBusDetail();
@@ -84,6 +86,7 @@ export default class App extends Component {
         busData={this.state.busData}
         seconds={this.state.seconds}
         handleSearchText={this.handleSearchText}
+        getBusDetail={this.getBusDetail.bind(this)}
       />
     );
   }

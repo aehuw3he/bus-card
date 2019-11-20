@@ -5,10 +5,7 @@ export default class Bus extends Component {
   render() {
     const { busObj } = this.props;
     const {
-      Direction,
       EstimateTime,
-      NextBusTime,
-      RouteName,
       StopName,
       StopSequence
     } = busObj;
