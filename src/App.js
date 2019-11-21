@@ -13,8 +13,8 @@ export default class App extends Component {
       seconds: 5,
       busData: [],
       url:
-        // "https://ptx.transportdata.tw/MOTC/v2/Bus/EstimatedTimeOfArrival/City/Taichung/51?$filter=SubRouteUID%20eq%20'TXG51'&$format=JSON"
-        "./51.json"
+        "https://ptx.transportdata.tw/MOTC/v2/Bus/EstimatedTimeOfArrival/City/Taichung/51?$filter=SubRouteUID%20eq%20'TXG51'&$format=JSON"
+        // "./51.json"
     };
   }
   countDown() {
