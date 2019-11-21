@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/bus-card/static/css/main.9c266401.chunk.css",
+    "main.js": "/bus-card/static/js/main.be56354b.chunk.js",
+    "main.js.map": "/bus-card/static/js/main.be56354b.chunk.js.map",
+    "runtime-main.js": "/bus-card/static/js/runtime-main.3b8a9ae2.js",
+    "runtime-main.js.map": "/bus-card/static/js/runtime-main.3b8a9ae2.js.map",
+    "static/js/2.c5c7b94c.chunk.js": "/bus-card/static/js/2.c5c7b94c.chunk.js",
+    "static/js/2.c5c7b94c.chunk.js.map": "/bus-card/static/js/2.c5c7b94c.chunk.js.map",
+    "index.html": "/bus-card/index.html",
+    "precache-manifest.6fbee6c36beca43032834125dfd4edee.js": "/bus-card/precache-manifest.6fbee6c36beca43032834125dfd4edee.js",
+    "service-worker.js": "/bus-card/service-worker.js",
+    "static/css/main.9c266401.chunk.css.map": "/bus-card/static/css/main.9c266401.chunk.css.map",
+    "static/media/logo.png": "/bus-card/static/media/logo.2260b52a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b8a9ae2.js",
+    "static/js/2.c5c7b94c.chunk.js",
+    "static/css/main.9c266401.chunk.css",
+    "static/js/main.be56354b.chunk.js"
+  ]
+}
