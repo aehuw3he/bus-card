@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f4dfb3c56fbd5f9726cac903692311ba",
+    "revision": "a14a8293a32942b1bbc31d31b9793f4f",
     "url": "/bus-card/index.html"
   },
   {
-    "revision": "6a18a9323e858e87de98",
-    "url": "/bus-card/static/css/main.0ecbb5b6.chunk.css"
+    "revision": "03dd44f25fc05f3e6751",
+    "url": "/bus-card/static/css/main.d7ae014f.chunk.css"
   },
   {
     "revision": "c18dc87f3a35a5f6098c",
     "url": "/bus-card/static/js/2.c5c7b94c.chunk.js"
   },
   {
-    "revision": "6a18a9323e858e87de98",
+    "revision": "03dd44f25fc05f3e6751",
     "url": "/bus-card/static/js/main.ef06ecc3.chunk.js"
   },
   {
